@@ -9,14 +9,15 @@ def ft_tqdm(lst: range) -> None:
                 lst: The range of numbers defined
     """
     length = len(lst)
+    new_lst = range(length)
     t_start = time.time()
-    for i in lst:
+    for i in new_lst:
         yield i
         t_elapsed = time.time() - t_start
         completion = min(i / length, 1.0)
         progress_bar = ("|["
-                        + "=" * round(completion * 50)
-                        + ">" + " " * (50 - round(completion * 50))
+                        + "=" * int(completion * 50)
+                        + ">" + " " * (50 - int(completion * 50))
                         + "]|")
         # the end="" argument in the print function is used to specify what
         # character or string should be printed at the end. A newline (\n) is
@@ -24,7 +25,7 @@ def ft_tqdm(lst: range) -> None:
         print(
             f"\r{100 * completion:3.0f}%"
             f"{progress_bar} "
-            f"{i}/{length} "
+            f"{i + 1}/{length} "
             f"[{t_elapsed:.2f}s]",
             end=""
         )

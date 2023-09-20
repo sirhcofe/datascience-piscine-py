@@ -65,7 +65,7 @@ def main():
         raise AssertionError("the arguments are badd")
     input = sys.argv[1]
     morse_code = encode_to_morse(input)
-    print(morse_code)
+    print(morse_code.strip())
 
 
 if __name__ == "__main__":
