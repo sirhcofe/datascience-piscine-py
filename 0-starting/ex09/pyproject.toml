@@ -1,0 +1,7 @@
+[project]
+name = "ft_package"
+version = "0.0.1"
+description = "A sample test package"
+
+[project.urls]
+"Homepage" = "https://github.com/sirhcofe/datascience-piscine-py"
