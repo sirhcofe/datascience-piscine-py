@@ -20,7 +20,8 @@ def main():
         if (length > 2):
             raise AssertionError("more than one argument is provided")
         elif (length < 2):
-            str = input("What is the text to count?\n")
+            print("What is the text to count?")
+            str = sys.stdin.readline()
         else:
             str = sys.argv[1]
         building(str)
