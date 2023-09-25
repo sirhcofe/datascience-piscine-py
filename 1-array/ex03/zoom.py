@@ -47,7 +47,7 @@ def zoom_image(image_data, scale):
 
     # Matplotlib
     plt.imshow(grayscale, cmap="grey")
-    plt.savefig('zoomed_image.png', bbox_inches='tight')
+    plt.savefig('zoomed_image.jpeg', bbox_inches='tight')
     # UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
     # plt.show()
 
