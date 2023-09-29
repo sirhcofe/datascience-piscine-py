@@ -57,10 +57,3 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
         return (bmi_array > limit).tolist()
     except TypeError:
         print("TypeError: bmi (first argument) must contains only list of int")
-
-
-height = [1.71, 1.65, 1.73, 1.95, 1.63]
-weight = [65.3, 58.4, 63.4, 94.5, 72.9]
-bmi = give_bmi(height, weight)
-print(bmi, type(bmi))
-print(apply_limit(bmi, 26))
