@@ -4,7 +4,8 @@ def aff_life(data):
     filtered = data[mask]
     if filtered.empty:
         raise AssertionError("country does not exist on dataset")
-    filtered.iloc[:, 1:].plot()
+    print(filtered)
+    plt.plot(filtered.columns[1:].values.astype(int), filtered.iloc[0, 1:])
     plt.xlabel('Year')
     plt.ylabel('Life expectancy')
     plt.title(f"{country} Life Expectancy Projections")
