@@ -13,8 +13,8 @@ def aff_pop(data):
         # pd.eval supports arithmetic operations
         filtered = filtered.apply(pd.eval)
         print(filtered)
-        for i, series in filtered.iterrows():
-            plt.plot(series.index.astype(int), series.values.astype(int), label=i)
+        for i, s in filtered.iterrows():
+            plt.plot(s.index.astype(int), s.values.astype(int), label=i)
         plt.legend()
         plt.xlabel('Year')
         plt.ylabel('Population')
