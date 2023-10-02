@@ -1,4 +1,16 @@
 def aff_pop(data):
+    """
+    Plot and display population projections for two countries from a dataset
+
+    Parameters
+    ----------
+    data: DataFrame
+        The dataset containing population data for various countries
+
+    Returns
+    -------
+    None
+    """
     try:
         country_one = "Malaysia"
         country_two = "Thailand"
