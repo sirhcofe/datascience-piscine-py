@@ -35,7 +35,7 @@ class Baratheon(Character):
         return f"Vector: ({self.family_name}, {self.eyes}, {self.hairs})"
 
     def die(self):
-        super().die()
+        self.is_alive = False
 
 
 class Lannister(Character):
@@ -69,7 +69,7 @@ class Lannister(Character):
         return f"Vector: ({self.family_name}, {self.eyes}, {self.hairs})"
 
     def die(self):
-        super().die()
+        self.is_alive = False
 
     @classmethod
     def create_lannister(cls, first_name, is_alive=True):
