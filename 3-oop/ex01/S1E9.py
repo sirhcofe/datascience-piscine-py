@@ -21,9 +21,10 @@ class Character(ABC):
     @abstractmethod
     def die(self):
         """
-        Mark the character as deceased by setting is_alive to False
+        Considered as a blueprint for other classes, abstract method is a 
+        declaration but does not have an implementation
         """
-        self.is_alive = False
+        pass
 
 
 class Stark(Character):
@@ -33,5 +34,4 @@ class Stark(Character):
         Mark the Stark character as deceased (overrides the method in the
         base class)
         """
-        # Call the base class method to set is_alive to False
-        super().die()
+        self.is_alive = False
