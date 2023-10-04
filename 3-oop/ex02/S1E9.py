@@ -21,7 +21,7 @@ class Character(ABC):
     @abstractmethod
     def die(self):
         """
-        Considered as a blueprint for other classes, abstract method is a 
+        Considered as a blueprint for other classes, abstract method is a
         declaration but does not have an implementation
         """
         pass
