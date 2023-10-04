@@ -21,7 +21,9 @@ def aff_pop(data):
         # expand the 'k' and 'M' suffix to zeros for all columns
         # regular expression (regex) is a pattern/filter that describes a set
         # of strings that matches the pattern
-        filtered = filtered.replace({'k': '*1e3', 'M': '*1e6'}, regex=True)
+        filtered = filtered.replace(
+            {'k': '*1e3', 'M': '*1e6', 'B': '*1e9'}, regex=True
+        )
         # pd.eval supports arithmetic operations
         filtered = filtered.apply(pd.eval)
         print(filtered)
